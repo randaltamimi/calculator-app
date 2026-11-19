@@ -20,7 +20,7 @@ jobs:
           cache: maven
 
       - name: Run OWASP Dependency Check
-        run: mvn -B org.owasp:dependency-check-maven:check -DfailBuildOnCVSS=11
+               run: mvn -B org.owasp:dependency-check-maven:check -DautoUpdate=false -DfailBuildOnCVSS=11
 
       - name: Upload SCA Report
         if: always()
